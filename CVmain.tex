@@ -294,7 +294,8 @@
  % if you need more control on page breaks, remove the parbox
  \parbox{\mpwidth}{
   \begin{tabular*}{1\mpwidth}{p{0.78\mpwidth}  r}
-    \textcolor{black}{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \colorbox{maincol}{\makebox[0.20\mpwidth]{\textcolor{white}{#1}}} \\
+    \textcolor{black}
+    {\ifthenelse{\isempty{#2}}{}{{\textbf{#2}} \xrfill[.5ex]{2pt}[lightcol] & \colorbox{maincol}{\makebox[0.20\mpwidth]{\textcolor{white}{#1}}}}} \\
    \textcolor{maincol}{\textbf{#3}} & \\
   \end{tabular*}\\[5pt]
   \ifthenelse{\isempty{#4}}{}{
@@ -395,7 +396,7 @@
  \begin {center}
   \HUGE{ \textbf{ \textcolor{darkcol}{ \uppercase{ SAKARI MARTTINEN } } } } \\[-24pt]
   \textcolor{darkcol}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
-  \large{ \textcolor{darkcol} {Curriculum vitae v1.4} }
+  \large{ \textcolor{darkcol} {Curriculum vitae v1.5} }
  \end {center}
 \end{minipage}} \\[14pt]
 %  \end {center}
@@ -430,11 +431,13 @@
 \subsection{Skills}
 \cvsection{Skills}
 
-\cvskill{Version Control} {4 years} {1} \\[-2pt]
+\cvskill{Version Control} {since 2021} {1} \\[-2pt]
 
-\cvskill{Programming} {4 years actively} {0.8} \\[-2pt]
+\cvskill{Programming} {since 2021} {0.8} \\[-2pt]
 
-\cvskill{SysAdmin} {3 years} {0.7} \\[-2pt]
+\cvskill{SysAdmin} {since 2022} {0.7} \\[-2pt]
+
+\cvskill{Soft. Architecture} {since 2022} {0.6} \\[-2pt]
 
 
 \end{column}
@@ -445,10 +448,26 @@
 \cvskill{Finnish} {Mother tongue} {1} \\[-2pt]
 
 \cvskill{English} {Working proficiency} {0.9} \\[-2pt]
+
+\cvskill{Swedish} {Some proficiency} {0.3} \\[-2pt]
+
+\cvskill{German} {Some proficiency} {0.3} \\[-2pt]
 \end{column}
 \end{paracol} 
 
 \vspace{14pt}
+
+
+\section{About}
+
+\cvevent
+{}
+{}
+{}
+{I am a student that codes mostly Python, Typescript and Rust. I like doing lots of small projects, yet even in Python I'm a strong believer in typing.}
+{}
+{}
+{}
 
 
 \section{Education}
@@ -471,6 +490,13 @@ I have done all the basic courses, and my favourite course thus far has been Dat
 \section{Work experiences}
 \cvsection{WORK EXPERIENCEs}
 
+\cvevent
+ {Jun-Aug 2026}
+ {Frontend developer}
+ {Hipsu Oy}
+ {I'm creating a website for Hipsu Oy, a machine translation software. I'm also writing some backend, but not the "true" backend that does the translations.}{}{
+ Svelte
+ }{}
 
 \cvevent
  {Apr 2024 - Nov 2024}
@@ -480,14 +506,6 @@ I have done all the basic courses, and my favourite course thus far has been Dat
  Also as the head of a small team of students, I had to teach these technologies, give out tasks and make sure they are done.
  }{
  React, Docker, Ansible, Linux, Windows
- }{}
-
-\cvevent
- {Jul 2023}
- {Computer science teacher}
- {Päivölä institute}
- {I was the senior of two teachers at a computer science camp for highschoolers. It required lots of responsibility, having to create plans and make sure everything is going well. I scrathed the surfaces of many different topics and taught Python}{}{
- Python
  }{}
 
  \cvevent
@@ -505,7 +523,7 @@ I have done all the basic courses, and my favourite course thus far has been Dat
  {In PSIL I worked in a team of other students. The most important skills I learned was version control and working with others. We used Scrum for 2 years, and were taught to use version control in a civilized way.}{
  I worked in 3 different projects: The first was web development, where our task was to modify and update an existing project created with Rust. The second project used Python to control and read sensors, like an infrared-camera. In the last project I was the lead, where we created a file-encryption webapp with Rust, WebAssembly and React.
  }{
- React, Flexbox, Python, Numpy, Rust, WebAssembly
+ React, Python, Rust, WebAssembly
  }{}
 
 
